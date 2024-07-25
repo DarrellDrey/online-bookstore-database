@@ -1,0 +1,23 @@
+INSERT INTO Authors (name, bio) VALUES
+('J.K. Rowling', 'British author, best known for the Harry Potter series'),
+('George R.R. Martin', 'American novelist and short story writer, screenwriter, and television producer');
+
+INSERT INTO Books (title, genre, price, author_id) VALUES
+('Harry Potter and the Philosopher\'s Stone', 'Fantasy', 19.99, 1),
+('A Game of Thrones', 'Fantasy', 24.99, 2);
+
+INSERT INTO Customers (name, email, address) VALUES
+('John Doe', 'john@example.com', '123 Main St'),
+('Jane Smith', 'jane@example.com', '456 Elm St');
+
+INSERT INTO Orders (order_date, customer_id) VALUES
+('2024-07-24', 1),
+('2024-07-25', 2);
+
+INSERT INTO OrderDetails (order_id, book_id, quantity) VALUES
+(1, 1, 1),
+(2, 2, 2);
+
+INSERT INTO Reviews (book_id, customer_id, rating, comment) VALUES
+(1, 1, 5, 'Amazing book!'),
+(2, 2, 4, 'Great read, but a bit lengthy.');

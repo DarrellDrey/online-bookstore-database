@@ -1,0 +1,16 @@
+SELECT Books.title, Authors.name
+FROM Books
+INNER JOIN Authors ON Books.author_id = Authors.author_id;
+
+SELECT Customers.name, COUNT(Orders.order_id) AS total_orders
+FROM Customers
+LEFT JOIN Orders ON Customers.customer_id = Orders.customer_id
+GROUP BY Customers.name;
+
+SELECT Books.title, AVG(Reviews.rating) AS average_rating
+FROM Books
+LEFT JOIN Reviews ON Books.book_id = Reviews.book_id
+GROUP BY Books.title;
+
+CREATE INDEX idx_books_title ON Books(title);
+CREATE INDEX idx_orders_customer_id ON Orders(customer_id);
